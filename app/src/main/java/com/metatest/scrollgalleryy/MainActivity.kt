@@ -42,51 +42,12 @@ class MainActivity : ComponentActivity() {
 
 
 
-@Composable
-fun AppScreen() {  // function sans paramètres
-    GaleryCell()
-}
 
 @Composable
-fun GaleryCell() {
+fun AppScreen() {  // fonction sans paramètres
 
+    GaleryCell() // la fonction Galerycell est stocker dans le fichier Galerycelll.kt
 
-    Column(Modifier.verticalScroll(rememberScrollState()))  // tête, arguments de Column
-
-
-    { // body, arguments de ColumnScope
-
-        repeat(3) {
-
-
-
-
-
-
-            Card(
-                elevation = 16.dp,
-                modifier = Modifier.padding(8.dp),
-            )
-
-            {
-                Image(
-                    painter = painterResource(id = R.drawable.greeksalad),
-                    contentDescription = "Greek Salad"
-
-                )
-
-
-
-
-
-
-            }
-
-
-
-
-        } // fin de repeat
-
-    }
 }
+
 
